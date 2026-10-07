@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sad Darsana – Belajar Filsafat Hindu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Nunito:wght@400;600;700&family=Noto+Sans+Devanagari:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{--maroon:#5a0f1e;--deep:#22092b;--saffron:#f28a1b;--gold:#f2c14e;--lotus:#d9457a;--bg:#fff8ec;--ink:#2a1220;--ok:#1f7a3f;--bad:#b3261e}
+*{box-sizing:border-box}
+body{margin:0;font-family:Nunito,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65}
+h1,h2,h3,h4,.brand{font-family:Marcellus,Georgia,serif;font-weight:400;line-height:1.25}
+a{color:inherit}
+.nav{background:var(--deep);padding:.8rem 1.2rem;position:sticky;top:0;z-index:5;border-bottom:2px solid var(--gold);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+.nav .lk{display:flex;gap:1.2rem}
+.nav .lk a{color:#fff3d6;text-decoration:none;font-weight:600}
+.nav .lk a:hover{color:var(--gold)}
+.cta{margin-top:2rem;text-align:center;background:#fff;border:2px dashed var(--gold);border-radius:16px;padding:1.2rem}
+.cta p{margin:0 0 .8rem}
+.brand{color:var(--gold);text-decoration:none;font-size:1.3rem}
+.brand span{font-family:'Noto Sans Devanagari',sans-serif;margin-right:.4rem}
+.hero{background:radial-gradient(circle at 70% 40%,#7a1730 0,var(--deep) 65%);color:#fff3d6;padding:3rem 1.2rem;overflow:hidden}
+.hero-in{max-width:1000px;margin:auto;display:flex;flex-wrap:wrap;align-items:center;gap:2rem;justify-content:center}
+.hero-t{flex:1 1 320px}
+.hero h1{font-size:clamp(2.2rem,7vw,3.8rem);margin:0 0 .6rem;color:var(--gold)}
+.hero p{max-width:34rem;font-size:1.1rem}
+.hero-r{display:flex;flex-direction:column;align-items:center;gap:1.4rem;width:min(340px,100%)}
+.hero-r .tmr{width:100%;margin-top:0}
+.mandala{width:min(320px,80vw);animation:spin 90s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){.mandala{animation:none}}
+.btn{display:inline-block;background:var(--saffron);color:#2a1220;font-weight:700;padding:.75rem 1.4rem;border-radius:999px;border:0;text-decoration:none;cursor:pointer;font:inherit;font-weight:700}
+.btn:hover{background:var(--gold)}
+.btn.alt{background:transparent;border:2px solid var(--maroon);color:var(--maroon)}
+.wrap{max-width:1000px;margin:auto;padding:2rem 1.2rem}
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem}
+.gal figure{margin:0;background:linear-gradient(160deg,#3a0f2e,var(--maroon));border-radius:18px;padding:.8rem;text-align:center;color:var(--gold);border:1px solid var(--gold)}
+.gal svg{width:100%;height:130px}
+.gal figcaption{font-size:.9rem}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem}
+.card{display:block;text-decoration:none;background:#fff;border:1px solid #ecd9b0;border-top:5px solid var(--saffron);border-radius:14px;padding:1rem 1.1rem}
+.card:hover{border-top-color:var(--lotus);box-shadow:0 6px 18px rgba(90,15,30,.15)}
+.card b{color:var(--lotus)}
+.card h3{margin:.2rem 0;font-size:1.2rem;color:var(--maroon)}
+.card p{margin:0;font-size:.92rem}
+.topic h1{color:var(--maroon);font-size:clamp(1.8rem,5vw,2.6rem);border-bottom:3px solid var(--gold);padding-bottom:.4rem}
+.topic h3{color:var(--maroon);margin-top:1.6rem}
+.topic h4{margin:.2rem 0;color:var(--lotus)}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}
+.two>div,.note{background:#fff;border-left:5px solid var(--saffron);padding:.6rem 1rem;border-radius:8px}
+.tbl{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:560px;background:#fff}
+th{background:var(--maroon);color:var(--gold);text-align:left}
+th,td{padding:.55rem .7rem;border:1px solid #e3cf9f;vertical-align:top}
+.quiz{margin-top:2.5rem;background:#fff;border:2px solid var(--gold);border-radius:16px;padding:1.2rem}
+fieldset{border:0;border-bottom:1px dashed #d8c390;margin:0 0 1rem;padding:0 0 1rem}
+legend{font-weight:700;padding:0;margin-bottom:.4rem}
+label{display:block;padding:.4rem .6rem;border-radius:8px;cursor:pointer}
+label:hover{background:#fff1d1}
+fieldset.ok label.pick{background:#d9f2e0}
+fieldset.bad label.pick{background:#fadbd8}
+.fb{margin:.4rem 0 0;font-size:.92rem;color:var(--bad);font-weight:600}
+fieldset.ok .fb{color:var(--ok)}
+.res{margin-top:1rem;padding:1rem;border-radius:12px;background:var(--deep);color:#fff3d6}
+.res strong{color:var(--gold);font-size:1.4rem}
+.pn{display:flex;justify-content:space-between;gap:1rem;margin-top:2rem;flex-wrap:wrap}
+footer{text-align:center;padding:1.5rem;background:var(--deep);color:var(--gold);font-size:.9rem}
+.tmr{margin-top:1.8rem;background:linear-gradient(160deg,#3a0f2e,var(--maroon));color:#fff3d6;border:1px solid var(--gold);border-radius:16px;padding:1.2rem;text-align:center}
+.tmr h2{margin:0 0 .3rem;color:var(--gold);font-size:1.4rem}
+.tmr ol{text-align:left;max-width:30rem;margin:.6rem auto 1rem;padding-left:1.3rem;font-size:.95rem}
+.ring{position:relative;width:200px;height:200px;margin:0 auto}
+.ring svg{width:100%;height:100%;transform:rotate(-90deg)}
+.ring .bg{fill:none;stroke:rgba(242,193,78,.25);stroke-width:8}
+.ring .fg{fill:none;stroke:var(--saffron);stroke-width:8;stroke-linecap:round;stroke-dasharray:565.5;stroke-dashoffset:0;transition:stroke-dashoffset .25s linear}
+.ring .tx{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.ring .tm{font-family:Marcellus,Georgia,serif;font-size:2.6rem;color:var(--gold);line-height:1}
+.ring .cue{font-size:.95rem;margin-top:.3rem;min-height:1.5em}
+.tmr .row{display:flex;gap:.6rem;justify-content:center;margin-top:1rem;flex-wrap:wrap}
+.tmr .btn.alt{border-color:var(--gold);color:var(--gold)}
+@media(prefers-reduced-motion:reduce){.ring .fg{transition:none}}
+.tg-btn{background:transparent;color:var(--gold);border:1.5px solid var(--gold);border-radius:999px;padding:.3rem .8rem;font:inherit;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:.4rem}
+.tg-btn:hover{background:var(--gold);color:var(--deep)}
+.lk{align-items:center}
+footer .kel{max-width:900px;margin:0 auto 1rem}
+footer .kel h3{margin:0 0 .6rem;font-size:1.3rem;color:var(--gold)}
+footer .kel ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:.5rem;text-align:left}
+footer .kel li{display:flex;align-items:center;gap:.6rem;background:rgba(242,193,78,.1);border:1px solid rgba(242,193,78,.45);border-radius:12px;padding:.4rem .7rem;color:#fff3d6;font-size:.92rem}
+footer .kel li b{flex:none;min-width:2rem;height:2rem;border-radius:50%;display:grid;place-items:center;background:var(--gold);color:var(--maroon);font-size:.85rem}
+footer .cp{opacity:.85;border-top:1px solid rgba(242,193,78,.3);padding-top:.8rem}
+html[data-theme=dark]{--bg:#150a1c;--ink:#f3e6d3;color-scheme:dark}
+html[data-theme=dark] .card,html[data-theme=dark] .cta,html[data-theme=dark] .two>div,html[data-theme=dark] .note,html[data-theme=dark] table,html[data-theme=dark] .quiz{background:#241231}
+html[data-theme=dark] .card,html[data-theme=dark] .cta,html[data-theme=dark] .quiz{border-color:#5b3b2e}
+html[data-theme=dark] th,html[data-theme=dark] td{border-color:#4a3340}
+html[data-theme=dark] th{background:#5a0f1e}
+html[data-theme=dark] .card h3,html[data-theme=dark] .topic h1,html[data-theme=dark] .topic h3,html[data-theme=dark] h2{color:var(--gold)}
+html[data-theme=dark] .card b,html[data-theme=dark] .topic h4{color:#ff8fb8}
+html[data-theme=dark] .btn.alt{border-color:var(--gold);color:var(--gold)}
+html[data-theme=dark] label:hover{background:#3a2347}
+html[data-theme=dark] fieldset{border-bottom-color:#5b3b2e}
+html[data-theme=dark] fieldset.ok label.pick{background:#1d4a2c}
+html[data-theme=dark] fieldset.bad label.pick{background:#5a2420}
+html[data-theme=dark] fieldset.ok .fb{color:#6fe39a}
+html[data-theme=dark] .fb{color:#ff8a80}
+html[data-theme=dark] .res{background:#3a0f2e}
+html[data-theme=dark] .nav,html[data-theme=dark] footer{background:#0e0614}
+#intro{position:fixed;inset:0;z-index:100;background:radial-gradient(circle at 50% 45%,#7a1730 0,var(--deep) 70%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.4rem;color:#fff3d6;text-align:center;cursor:pointer;transition:opacity .8s ease,visibility .8s}
+#intro.out{opacity:0;visibility:hidden}
+#intro .bl{animation:bloom 1.6s cubic-bezier(.2,.8,.2,1) both}
+#intro .mandala{width:min(260px,60vw);animation-duration:14s}
+#intro .i1{font-family:Marcellus,Georgia,serif;font-size:clamp(1.6rem,6vw,2.4rem);color:var(--gold);margin-top:.8rem;animation:rise .8s .9s ease both}
+#intro .i2{letter-spacing:.3em;text-transform:uppercase;font-size:.85rem;animation:rise .8s 1.2s ease both}
+#intro .bar{width:140px;height:3px;border-radius:3px;background:rgba(242,193,78,.25);overflow:hidden;margin-top:1.2rem;animation:rise .6s 1.2s ease both}
+#intro .bar i{display:block;height:100%;background:var(--gold);transform-origin:left;animation:fill 1.4s 1.2s ease both}
+@keyframes bloom{from{opacity:0;transform:scale(.2) rotate(-90deg)}to{opacity:1;transform:none}}
+@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@keyframes fill{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes drop{from{opacity:0;transform:translateY(-100%)}to{opacity:1;transform:none}}
+html.go .nav{animation:drop .6s ease both}
+html.go #app>*>*{animation:rise .7s ease both}
+html.go #app>*>*:nth-child(2){animation-delay:.12s}
+html.go #app>*>*:nth-child(3){animation-delay:.24s}
+html.go .card,html.go .gal figure{animation:rise .6s ease both}
+html.go .card:nth-child(2),html.go .gal figure:nth-child(2){animation-delay:.08s}
+html.go .card:nth-child(3),html.go .gal figure:nth-child(3){animation-delay:.16s}
+html.go .card:nth-child(4),html.go .gal figure:nth-child(4){animation-delay:.24s}
+html.go .card:nth-child(5){animation-delay:.32s}
+html.go .card:nth-child(6){animation-delay:.4s}
+@media(prefers-reduced-motion:reduce){#intro{display:none}html.go .nav,html.go #app>*>*,html.go .card,html.go .gal figure{animation:none}}
+:focus-visible{outline:3px solid var(--lotus);outline-offset:2px}
+</style>
+<script>try{var t=localStorage.getItem('theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body>
+<div id="intro" aria-hidden="true"><div class="bl"></div><div class="i1">Om Swastyastu</div><div class="i2">Sad Darsana</div><div class="bar"><i></i></div></div>
+<header class="nav"><a class="brand" href="#/"><span>ॐ</span>Sad Darsana</a><nav class="lk"><a href="#/">Materi</a><a href="#/l">Latihan Soal</a><button class="tg-btn" id="thm" type="button"></button></nav></header>
+<main id="app"></main>
+<footer><div class="kel"><h3>Kelompok 2</h3><ul>
+<li><b>3</b>Dewa Ayu Cahaya Samhita</li>
+<li><b>8</b>Gede Echel Asta Agung</li>
+<li><b>12</b>I Gede Wira Dharma Wibawa</li>
+<li><b>15</b>I Made Aditya</li>
+<li><b>23</b>Ida Ayu Dewi Cahya Adnyani</li>
+<li><b>38</b>Ni Putu Diah Putri Dewi</li>
+<li><b>40</b>Pande Kadek Sri Purnami</li>
+<li><b>44</b>Sang Ayu Nyoman Tri Cantika Putri</li></ul></div>
+<div class="cp">Om Swastyastu · Belajar filsafat Hindu</div></footer>
+<script>
+const T=[
+{t:"Pengertian Darsana",s:"Arti kata, istilah lain, Astika dan Nastika",
+h:`<p><b>Darsana</b> berasal dari akar kata <i>drs</i> = "melihat", sehingga berarti <b>pandangan tentang kebenaran</b>. Darsana mengoptimalkan kecerdasan dan penalaran tajam untuk memahami intisari Weda di bidang filsafat. <b>Sad Darsana</b> dikenal juga sebagai filsafat Hindu.</p>
+<h3>Istilah lain Darsana</h3><ul><li><b>Tattwa</b> – hakikat atau kebenaran</li><li><b>Mananasastra</b> – pemikiran, perencanaan, renungan</li><li><b>Wicarasastra</b> – pertimbangan dan penyelidikan tentang kebenaran</li><li><b>Tarka</b> – spekulasi atau penalaran logis</li><li><b>Sraddha</b> – keyakinan atau keimanan</li></ul>
+<h3>Dua kelompok Darsana</h3><div class="two"><div><h4>Astika</h4><p>Mengakui kewenangan Weda. Terdiri dari 6 aliran (Sad Darsana) beserta Rsi pendirinya:</p><ul><li><b>Samkhya</b> – Rsi Kapila</li><li><b>Yoga</b> – Rsi Patanjali</li><li><b>Mimamsa</b> – Rsi Jaimini</li><li><b>Waisesika</b> – Rsi Kanada</li><li><b>Nyaya</b> – Rsi Gautama (Aksapada)</li><li><b>Wedanta</b> – Rsi Badarayana (Wyasa)</li></ul><p>Sad Darsana = 6 sistem filsafat / 6 cara pembuktian kebenaran.</p></div><div><h4>Nastika</h4><p>Sama sekali tidak mengakui kebenaran Weda. Terdiri dari 3 aliran beserta tokoh pendirinya:</p><ul><li><b>Carvaka</b> – Brhaspati</li><li><b>Bauddha</b> – Siddhartha Gautama (Buddha)</li><li><b>Jaina</b> – Mahavira (Wardhamana)</li></ul></div></div>`,
+q:[["Kata Darsana berasal dari akar kata \"drs\" yang berarti…",["Berpikir","Melihat","Berbuat","Mendengar"],1],
+["Tarka memiliki arti…",["Keyakinan","Hakikat kebenaran","Penalaran logis","Renungan"],2],
+["Kelompok yang mengakui kewenangan Weda disebut…",["Nastika","Astika","Carvaka","Jaina"],1],
+["Aliran berikut yang BUKAN termasuk Nastika adalah…",["Carvaka","Bauddha","Jaina","Samkhya"],3],
+["Darsana secara harfiah berarti pandangan tentang…",["Kebenaran","Upacara","Seni","Perdagangan"],0],
+["Sraddha memiliki arti…",["Pertimbangan","Keyakinan atau keimanan","Pengamatan","Penalaran logis"],1],
+["Istilah lain Darsana yang berarti hakikat atau kebenaran adalah…",["Tarka","Sraddha","Tattwa","Mananasastra"],2],
+["Jumlah aliran dalam kelompok Astika (Sad Darsana) adalah…",["3","4","9","6"],3],
+["Kelompok yang sama sekali tidak mengakui kebenaran Weda disebut…",["Astika","Nastika","Sad Darsana","Wedanta"],1],
+["Wicarasastra berarti…",["Keyakinan","Penalaran logis","Pertimbangan dan penyelidikan tentang kebenaran","Hakikat"],2]]},
+
+{t:"Pokok Ajaran Sad Darsana",s:"Enam sistem filsafat dan penerapannya",
+h:`<p>Sad Darsana adalah enam sistem filsafat Hindu sebagai dasar memahami kehidupan, Tuhan, alam, dan pembebasan.</p>
+<div class="tbl"><table><tr><th>Darsana</th><th>Rsi Pendiri</th><th>Pokok Ajaran</th><th>Penerapan</th></tr>
+<tr><td>Nyaya</td><td>Rsi Gautama (Aksapada)</td><td>Logika dan penalaran untuk memperoleh kebenaran</td><td>Berpikir kritis, tidak mudah percaya tanpa bukti</td></tr>
+<tr><td>Waisesika</td><td>Rsi Kanada</td><td>Hakikat benda dan unsur penyusun alam</td><td>Mempelajari alam dengan teliti, menghargai keteraturan alam</td></tr>
+<tr><td>Samkhya</td><td>Rsi Kapila</td><td>Purusa (kesadaran) dan Prakerti (materi); tujuan: bebas dari penderitaan</td><td>Mengendalikan diri, tidak terikat keinginan duniawi</td></tr>
+<tr><td>Yoga</td><td>Rsi Patanjali</td><td>Pengendalian pikiran dan indra lewat yoga, meditasi, disiplin diri</td><td>Meditasi, menjaga konsentrasi, mengendalikan emosi</td></tr>
+<tr><td>Mimamsa</td><td>Rsi Jaimini</td><td>Melaksanakan dharma, kewajiban, dan ritual sesuai Weda</td><td>Menjalankan kewajiban dengan disiplin</td></tr>
+<tr><td>Wedanta</td><td>Rsi Badarayana (Wyasa)</td><td>Hubungan Atman, Brahman, dan alam; jalan menuju moksa</td><td>Kesadaran spiritual dan kasih sayang</td></tr></table></div>
+<p class="note"><b>Kesimpulan:</b> Sad Darsana mengajarkan manusia berpikir benar, memahami alam, mengendalikan diri, menjalankan kewajiban, dan meningkatkan kehidupan spiritual menuju moksa.</p>`,
+q:[["Darsana yang berfokus pada logika dan penalaran adalah…",["Nyaya","Yoga","Mimamsa","Wedanta"],0],
+["Konsep Purusa dan Prakerti dibahas dalam…",["Waisesika","Samkhya","Nyaya","Yoga"],1],
+["Penerapan ajaran Yoga dalam kehidupan adalah…",["Melaksanakan ritual saja","Meneliti unsur alam","Meditasi dan mengendalikan emosi","Mengumpulkan harta"],2],
+["Darsana yang membahas hubungan Atman, Brahman, dan jalan menuju moksa adalah…",["Mimamsa","Samkhya","Waisesika","Wedanta"],3],
+["Darsana yang membahas hakikat benda dan unsur penyusun alam adalah…",["Nyaya","Waisesika","Mimamsa","Yoga"],1],
+["Dalam Samkhya, Purusa berarti…",["Materi","Kesadaran","Ritual","Logika"],1],
+["Darsana yang menekankan pelaksanaan dharma, kewajiban, dan ritual sesuai Weda adalah…",["Samkhya","Wedanta","Mimamsa","Waisesika"],2],
+["Penerapan ajaran Nyaya dalam kehidupan adalah…",["Berpikir kritis dan tidak mudah percaya tanpa bukti","Mengendalikan diri dari keinginan duniawi","Melaksanakan ritual saja","Bermeditasi setiap hari"],0],
+["Tujuan ajaran Samkhya adalah…",["Mengumpulkan kekayaan","Menguasai logika","Memahami unsur alam","Bebas dari penderitaan"],3],
+["Penerapan ajaran Wedanta dalam kehidupan adalah…",["Disiplin menjalankan kewajiban","Berpikir kritis","Meneliti unsur alam","Kesadaran spiritual dan kasih sayang"],3]]},
+
+{t:"Nyaya Darsana dan Catur Pramana",s:"Empat cara memperoleh pengetahuan yang benar",
+h:`<p>Nyaya Darsana dipelopori oleh <b>Rsi Gautama (Aksapada)</b> melalui kitab <i>Nyaya Sutra</i>, kemudian diulas oleh <b>Rsi Watsyayana</b> dalam <i>Nyaya Bhasya</i>. Nyaya membantu memilah informasi, menyelesaikan masalah, menyaring hoaks, dan berargumen berdasarkan fakta. Pengetahuan yang benar diperoleh melalui <b>Catur Pramana</b>:</p>
+<ul><li><b>Pratyaksa</b> – pengamatan langsung dengan pancaindra.</li><li><b>Anumana</b> – penarikan kesimpulan (inferensi) lewat 5 tahap: Pratijna, Hetu, Udaharana, Upanaya, Nigamana.</li><li><b>Upamana</b> – perbandingan dengan pengalaman sebelumnya.</li><li><b>Sabda</b> – kesaksian otentik dari sumber terpercaya: <i>Laukika Sabda</i> (ahli, secara logis) dan <i>Waidika Sabda</i> (kitab suci Weda).</li></ul>
+<p class="note">Manfaatnya: siswa menjadi pribadi kritis, kolaboratif, komunikatif, kreatif, dan inovatif dalam mencari solusi.</p>`,
+q:[["Pengamatan langsung dengan pancaindra disebut…",["Anumana","Upamana","Sabda","Pratyaksa"],3],
+["Tahap pertama dalam Anumana adalah…",["Pratijna","Hetu","Nigamana","Upanaya"],0],
+["Membandingkan fakta dengan pengalaman sebelumnya termasuk…",["Upamana","Pratyaksa","Sabda","Hetu"],0],
+["Kitab suci Weda sebagai sumber pengetahuan termasuk…",["Laukika Sabda","Waidika Sabda","Pratyaksa","Upamana"],1],
+["Catur Pramana berarti empat cara untuk…",["Memperoleh pengetahuan yang benar","Melaksanakan upacara","Bermeditasi","Membangun pura"],0],
+["Penarikan kesimpulan (inferensi) disebut…",["Pratyaksa","Upamana","Anumana","Sabda"],2],
+["Tahap terakhir dalam Anumana adalah…",["Pratijna","Nigamana","Hetu","Udaharana"],1],
+["Kesaksian dari ahli yang dapat dipercaya secara logis disebut…",["Waidika Sabda","Upamana","Pratyaksa","Laukika Sabda"],3],
+["Jumlah tahap dalam Anumana adalah…",["3","4","5","6"],2],
+["Nyaya Darsana membantu kita untuk…",["Menghafal mantra tanpa memahami","Menyaring hoaks dan berargumen berdasarkan fakta","Menghindari semua pertanyaan","Mengabaikan bukti"],1]]},
+
+{t:"Yoga Darsana",s:"Penyatuan tubuh, pikiran, dan spiritual",
+h:`<p>Yoga Darsana dipelopori oleh <b>Rsi Patanjali</b> melalui kitab <i>Yoga Sutra</i> (diulas oleh Rsi Wyasa dalam <i>Yoga Bhasya</i>). Yoga Darsana menekankan penyatuan fisik, pikiran, dan spiritual untuk keseimbangan hidup.</p>
+<h3>Relevansi abad ke-21</h3><ul><li><b>Kecerdasan emosional:</b> mengendalikan pikiran, meningkatkan konsentrasi, memberi ketenangan batin, menumbuhkan empati.</li><li><b>Etika (Yama dan Niyama):</b> kejujuran, disiplin, ahimsa (tidak merugikan orang lain), kesederhanaan.</li><li><b>Mindfulness:</b> mengurangi ketergantungan gawai dan menjaga keselarasan dengan lingkungan.</li></ul>
+<h3>Praktik dan manfaat</h3><ul><li><b>Asana</b> (postur tubuh) – kekuatan dan fleksibilitas.</li><li><b>Pranayama</b> (olah napas) – meredakan stres dan cemas.</li><li><b>Dharana</b> (pemusatan pikiran) dan <b>Dhyana</b> (meditasi) – memperkuat konsentrasi, menjernihkan pikiran.</li></ul>
+<p class="note">Yoga juga menjadi jalan spiritual menyatukan Atman dengan Brahman.</p>`,
+q:[["Asana adalah latihan…",["Olah napas","Postur tubuh","Pemusatan pikiran","Puasa"],1],
+["Pranayama bermanfaat untuk…",["Meredakan stres dan kecemasan","Menghafal Weda","Membangun candi","Berdagang"],0],
+["Dharana berarti…",["Meditasi","Postur tubuh","Pemusatan pikiran","Kejujuran"],2],
+["Ahimsa berarti…",["Tidak merugikan atau menyakiti","Disiplin waktu","Kesederhanaan","Konsentrasi"],0],
+["Dhyana berarti…",["Postur tubuh","Olah napas","Kejujuran","Meditasi"],3],
+["Yoga Darsana menekankan penyatuan…",["Fisik, pikiran, dan spiritual","Hanya fisik","Logika dan bukti","Harta dan jabatan"],0],
+["Asana bermanfaat untuk meningkatkan…",["Hafalan","Kekayaan","Kekuatan dan fleksibilitas","Kecepatan membaca"],2],
+["Yama dan Niyama berkaitan dengan…",["Postur tubuh","Etika","Olah napas","Meditasi"],1],
+["Mindfulness dalam Yoga membantu…",["Menambah ketergantungan gawai","Menjauhi lingkungan","Mengabaikan etika","Mengurangi ketergantungan gawai dan menjaga keselarasan dengan lingkungan"],3],
+["Yoga sebagai jalan spiritual menyatukan…",["Atman dengan Brahman","Tubuh dengan harta","Logika dengan ritual","Alam dengan teknologi"],0]]},
+
+{t:"Penerapan Sad Darsana di Masyarakat",s:"Nilai filsafat dalam kehidupan sehari-hari",
+h:`<div class="tbl"><table><tr><th>Darsana</th><th>Rsi Pencetus</th><th>Implementasi di masyarakat</th></tr>
+<tr><td>Nyaya</td><td>Rsi Gautama</td><td>Menangkal hoaks ("saring sebelum sharing"); keputusan musyawarah berdasarkan bukti dan argumen, bukan emosi.</td></tr>
+<tr><td>Waisesika</td><td>Rsi Kanada</td><td>Mendukung pendidikan sains dan teknologi; mengelola alam secara rasional dan efisien.</td></tr>
+<tr><td>Samkhya</td><td>Rsi Kapila</td><td>Hidup seimbang antara materi dan rohani (work-life balance); merawat lingkungan.</td></tr>
+<tr><td>Yoga</td><td>Rsi Patanjali</td><td>Asana dan meditasi untuk kesehatan holistik; melatih kesabaran dan mengendalikan emosi.</td></tr>
+<tr><td>Mimamsa</td><td>Rsi Jaimini</td><td>Menjalankan tugas sebagai dharma (belajar rajin, bekerja jujur); melestarikan upacara dan tradisi dengan gotong royong.</td></tr>
+<tr><td>Wedanta</td><td>Rsi Badarayana (Wyasa)</td><td>Tat Twam Asi ("Aku adalah Engkau"): toleransi, welas asih, tidak diskriminatif karena semua makhluk bersumber dari Brahman.</td></tr></table></div>`,
+q:[["\"Saring sebelum sharing\" adalah penerapan ajaran…",["Yoga","Nyaya","Mimamsa","Samkhya"],1],
+["Work-life balance dan merawat lingkungan sejalan dengan…",["Samkhya","Nyaya","Wedanta","Waisesika"],0],
+["Tat Twam Asi menumbuhkan sikap…",["Persaingan","Ketergantungan","Toleransi dan welas asih","Kesombongan"],2],
+["Pelajar rajin belajar sebagai kewajiban moral sejalan dengan…",["Nyaya","Waisesika","Yoga","Mimamsa"],3],
+["Mendukung pendidikan sains dan teknologi sejalan dengan…",["Waisesika","Mimamsa","Wedanta","Yoga"],0],
+["Keputusan musyawarah berdasarkan bukti dan argumen, bukan emosi, merupakan penerapan…",["Wedanta","Yoga","Nyaya","Mimamsa"],2],
+["Asana dan meditasi untuk kesehatan holistik merupakan penerapan…",["Samkhya","Yoga","Waisesika","Nyaya"],1],
+["Tat Twam Asi berarti…",["Saring sebelum sharing","Kerja adalah ibadah","Tuhan Maha Esa","Aku adalah Engkau"],3],
+["Karena semua makhluk bersumber dari Brahman, kita tidak boleh bersikap…",["Diskriminatif","Toleran","Welas asih","Menghargai sesama"],0],
+["Melestarikan upacara dan tradisi dengan gotong royong sejalan dengan…",["Waisesika","Nyaya","Yoga","Mimamsa"],3]]},
+
+{t:"Darsana dan Kearifan Lokal",s:"Kaitan dengan tradisi Hindu Nusantara (Bali)",
+h:`<ul><li><b>Tri Hita Karana</b> – harmoni dengan Tuhan, sesama, dan alam; sejalan dengan Purusa–Prakerti (Samkhya, Rsi Kapila) dan kesatuan alam (Wedanta, Rsi Badarayana).</li><li><b>Menyama Braya</b> dan gotong royong – wujud nyata Tat Twam Asi (Wedanta, Rsi Badarayana): membantu tetangga sama dengan membantu diri sendiri.</li><li><b>Rwa Bhineda</b> – dualitas yang saling melengkapi (baik-buruk, siang-malam); berkaitan dengan dualitas Samkhya (Rsi Kapila).</li><li><b>Desa Kala Patra</b> (tempat, waktu, keadaan) – aturan dan ritual disesuaikan dengan kondisi dan zaman; sejalan dengan cara pandang Nyaya (Rsi Gautama) yang logis dan realistis serta pelaksanaan ritual Mimamsa (Rsi Jaimini).</li></ul>
+<h3>Rsi pembawa tradisi Hindu di Bali</h3><ul><li><b>Rsi Markandeya</b> – dikenal membuka hutan dan mendirikan Pura Besakih.</li><li><b>Mpu Kuturan</b> – dikenal menata Desa Pakraman dan konsep Kahyangan Tiga.</li><li><b>Dang Hyang Nirartha</b> – pendeta dan pujangga yang memperkaya spiritualitas dan budaya Bali.</li></ul>`,
+q:[["Tri Hita Karana adalah tiga penyebab…",["Kemakmuran","Kebahagiaan","Kekuasaan","Kesehatan"],1],
+["Budaya Menyama Braya merupakan wujud ajaran…",["Rwa Bhineda","Anumana","Tat Twam Asi","Asana"],2],
+["Rwa Bhineda berkaitan dengan dualitas dalam…",["Samkhya","Yoga","Nyaya","Mimamsa"],0],
+["Konsep Desa Kala Patra berarti…",["Tempat, waktu, dan keadaan","Tuhan, manusia, alam","Pikiran, ucapan, perbuatan","Lahir, hidup, mati"],0],
+["Tri Hita Karana menekankan keharmonisan hubungan manusia dengan…",["Harta, jabatan, dan ilmu","Pikiran, ucapan, dan perbuatan","Tuhan, sesama, dan alam","Pura, sawah, dan laut"],2],
+["Contoh dualitas dalam Rwa Bhineda adalah…",["Baik dan buruk","Pura dan sawah","Tempat dan waktu","Padi dan jagung"],0],
+["Gotong royong merupakan wujud nyata ajaran…",["Pratyaksa","Asana","Tat Twam Asi","Dharana"],2],
+["Kesatuan alam dalam Tri Hita Karana sejalan dengan Darsana…",["Wedanta","Nyaya","Yoga","Mimamsa"],0],
+["Aturan dan ritual yang disesuaikan dengan tempat, waktu, dan keadaan mencerminkan prinsip…",["Menyama Braya","Rwa Bhineda","Desa Kala Patra","Tri Hita Karana"],2],
+["Konsep Purusa–Prakerti dalam Samkhya sejalan dengan…",["Menyama Braya","Tri Hita Karana","Desa Kala Patra","Pratyaksa"],1]]}
+];
+
+const mand=()=>{let s='';for(let i=0;i<16;i++)s+=`<ellipse cx="200" cy="95" rx="18" ry="72" transform="rotate(${i*22.5} 200 200)" fill="rgba(242,138,27,.18)" stroke="#f2c14e" stroke-width="1.5"/>`;for(let i=0;i<8;i++)s+=`<ellipse cx="200" cy="140" rx="12" ry="40" transform="rotate(${i*45+22.5} 200 200)" fill="rgba(217,69,122,.5)" stroke="#f2c14e"/>`;return `<svg class="mandala" viewBox="0 0 400 400" aria-hidden="true"><circle cx="200" cy="200" r="190" fill="none" stroke="#f2c14e" stroke-width="2" stroke-dasharray="3 7"/>${s}<circle cx="200" cy="200" r="34" fill="#f2c14e"/><text x="200" y="217" text-anchor="middle" font-size="46" font-family="Noto Sans Devanagari,sans-serif" fill="#5a0f1e">ॐ</text></svg>`};
+const lotus=()=>{let s='';[-64,-32,0,32,64].forEach(a=>s+=`<ellipse cx="100" cy="70" rx="15" ry="42" transform="rotate(${a} 100 112)" fill="#d9457a" stroke="#f2c14e" stroke-width="1.5"/>`);return `<svg viewBox="0 0 200 130" aria-hidden="true">${s}<path d="M30 112q70 22 140 0" stroke="#f2c14e" fill="none" stroke-width="3"/></svg>`};
+const diya=`<svg viewBox="0 0 200 130" aria-hidden="true"><path d="M100 18c22 26 18 46 0 46s-22-20 0-46z" fill="#f28a1b" stroke="#f2c14e" stroke-width="2"/><path d="M100 36c8 10 6 18 0 18s-8-8 0-18z" fill="#f2c14e"/><path d="M40 78h120q-8 34-60 34t-60-34z" fill="#c2611b" stroke="#f2c14e" stroke-width="2"/></svg>`;
+const meru=`<svg viewBox="0 0 200 130" aria-hidden="true"><g fill="#3a0f2e" stroke="#f2c14e" stroke-width="2"><path d="M96 6h8l4 14H92z"/><path d="M80 34l14-14h12l14 14z"/><path d="M62 54l18-20h40l18 20z"/><path d="M44 76l18-22h76l18 22z"/><path d="M26 100l18-24h112l18 24z"/></g><rect x="70" y="100" width="60" height="22" fill="#f2c14e"/></svg>`;
+const om=`<svg viewBox="0 0 200 130" aria-hidden="true"><circle cx="100" cy="65" r="56" fill="none" stroke="#f2c14e" stroke-width="2"/><text x="100" y="88" text-anchor="middle" font-size="70" font-family="Noto Sans Devanagari,sans-serif" fill="#f28a1b">ॐ</text></svg>`;
+
+const home=()=>`<section class="hero"><div class="hero-in"><div class="hero-t"><h1>Sad Darsana</h1><p>Enam cara memandang kebenaran dalam filsafat Hindu. Belajar materi ringkas, lalu uji pemahamanmu lewat latihan soal.</p><a class="btn" href="#/m/0">Mulai belajar</a></div><div class="hero-r">${mand()}${timer()}</div></div></section>
+<section class="wrap"><div class="gal"><figure>${lotus()}<figcaption>Padma (teratai)</figcaption></figure><figure>${diya}<figcaption>Diya (pelita)</figcaption></figure><figure>${meru}<figcaption>Pura Meru</figcaption></figure><figure>${om}<figcaption>Om (Aum)</figcaption></figure></div>
+<h2>Daftar materi</h2><div class="cards">${T.map((x,i)=>`<a class="card" href="#/m/${i}"><b>Bab ${i+1}</b><h3>${x.t}</h3><p>${x.s}</p></a>`).join('')}</div>
+<h2 style="margin-top:2rem">Latihan soal</h2><p>Selesai membaca materi? Uji pemahamanmu di halaman latihan.</p>${latCards()}</section>`;
+const latCards=()=>`<div class="cards">${T.map((x,i)=>`<a class="card" href="#/l/${i}"><b>Latihan Bab ${i+1}</b><h3>${x.t}</h3><p>${x.q.length} soal pilihan ganda</p></a>`).join('')}</div>`;
+const latList=()=>`<article class="wrap topic"><h1>Latihan Soal</h1><p>Pilih bab yang ingin kamu uji. Kerjakan dari pemahamanmu sendiri tanpa membuka materi.</p>${latCards()}</article>`;
+
+const timer=()=>`<section class="tmr" aria-labelledby="tmh"><h2 id="tmh">Yoga 2 Menit Sebelum Belajar</h2><p>Tenangkan diri dulu sebelum mulai belajar:</p><ol><li><b>Asana:</b> duduk tegak dan rileks, bahu turun, mata terpejam.</li><li><b>Pranayama:</b> tarik napas perlahan, lalu hembuskan, ikuti petunjuk di bawah.</li><li><b>Dharana/Dhyana:</b> pusatkan pikiran pada napas, kembalikan bila pikiran melayang.</li></ol>
+<div class="ring"><svg viewBox="0 0 200 200" aria-hidden="true"><circle class="bg" cx="100" cy="100" r="90"/><circle class="fg" id="tf" cx="100" cy="100" r="90"/></svg><div class="tx"><div class="tm" id="tt" role="timer" aria-live="off">02:00</div><div class="cue" id="tc" aria-live="polite">Siap dimulai</div></div></div>
+<div class="row"><button class="btn" type="button" id="ts">Mulai</button><button class="btn alt" type="button" id="tr">Atur ulang</button></div></section>`;
+
+const topic=n=>{const x=T[n];return `<article class="wrap topic"><a href="#/">← Semua materi</a><h1>${x.t}</h1>${x.h}
+<div class="cta"><p><b>Sudah selesai membaca?</b> Latihan soal ada di halaman terpisah.</p><a class="btn" href="#/l/${n}">Kerjakan latihan soal →</a></div>
+<div class="pn">${n>0?`<a class="btn alt" href="#/m/${n-1}">← Bab sebelumnya</a>`:'<span></span>'}${n<T.length-1?`<a class="btn" href="#/m/${n+1}">Bab berikutnya →</a>`:'<a class="btn" href="#/">Selesai</a>'}</div></article>`};
+
+const sh=a=>{a=[...a];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+let cur=[];
+const quiz=n=>{const x=T[n];cur=sh(x.q.map(q=>({q:q[0],o:sh(q[1].map((t,i)=>({t,c:i===q[2]})))})));
+return `<article class="wrap topic"><a href="#/l">← Semua latihan</a><h1>Latihan Soal: ${x.t}</h1><p>Kerjakan dari pemahamanmu sendiri. Urutan soal dan pilihan jawaban diacak setiap kali dibuka.</p>
+<form class="quiz" id="qz" style="margin-top:1rem">${cur.map((q,k)=>`<fieldset><legend>${k+1}. ${q.q}</legend>${q.o.map((o,j)=>`<label><input type="radio" name="q${k}" value="${j}"> ${o.t}</label>`).join('')}<p class="fb" hidden></p></fieldset>`).join('')}
+<button class="btn" type="submit">Periksa jawaban</button> <button class="btn alt" type="button" id="rs">Ulangi</button><div class="res" id="res" hidden></div></form>
+<div class="pn">${n>0?`<a class="btn alt" href="#/l/${n-1}">← Latihan sebelumnya</a>`:'<span></span>'}${n<T.length-1?`<a class="btn" href="#/l/${n+1}">Latihan berikutnya →</a>`:'<a class="btn" href="#/l">Selesai</a>'}</div></article>`};
+
+function bind(n){const f=document.getElementById('qz');if(!f)return;const Q=cur;
+f.onsubmit=e=>{e.preventDefault();let b=0;[...f.querySelectorAll('fieldset')].forEach((fs,k)=>{const c=f.querySelector(`input[name=q${k}]:checked`),fb=fs.querySelector('.fb');fs.querySelectorAll('label').forEach(l=>l.classList.remove('pick'));fs.classList.remove('ok','bad');const ok=!!c&&Q[k].o[+c.value].c;if(c)c.parentElement.classList.add('pick');fs.classList.add(ok?'ok':'bad');if(ok)b++;fb.hidden=false;fb.textContent=ok?'Benar!':(c?'Salah.':'Belum dijawab.')+' Jawaban benar: '+Q[k].o.find(o=>o.c).t});
+const s=Q.length-b,r=document.getElementById('res'),n100=Math.round(b/Q.length*100);r.hidden=false;r.innerHTML=`Benar: <strong>${b}</strong> · Salah: <strong>${s}</strong> · Nilai: <strong>${n100}</strong><br>${n100==100?'Sempurna! Om Santih, Santih, Santih, Om.':n100>=60?'Bagus! Baca lagi bagian yang masih salah.':'Ayo baca materi sekali lagi, lalu coba lagi.'}`;r.scrollIntoView({behavior:'smooth',block:'center'})};
+document.getElementById('rs').onclick=()=>{document.getElementById('app').innerHTML=quiz(n);bind(n);scrollTo(0,0)}}
+
+let tI=null;
+function bindTimer(){const ts=document.getElementById('ts');if(!ts)return;
+const D=120,tt=document.getElementById('tt'),tc=document.getElementById('tc'),tf=document.getElementById('tf'),tr=document.getElementById('tr'),C=2*Math.PI*90;
+let left=D,end=0,run=false,ac=null;
+const fmt=x=>String(Math.floor(x/60)).padStart(2,'0')+':'+String(x%60).padStart(2,'0');
+const draw=()=>{const sec=Math.ceil(left);tt.textContent=fmt(sec);tf.style.strokeDashoffset=C*(1-left/D)};
+const beep=()=>{try{ac=ac||new (window.AudioContext||window.webkitAudioContext)();[0,.6,1.2].forEach(d=>{const o=ac.createOscillator(),g=ac.createGain();o.frequency.value=528;o.connect(g);g.connect(ac.destination);const t=ac.currentTime+d;g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(.3,t+.05);g.gain.exponentialRampToValueAtTime(.0001,t+.5);o.start(t);o.stop(t+.55)})}catch(e){}};
+const stop=()=>{clearInterval(tI);tI=null;run=false};
+const tick=()=>{left=Math.max(0,(end-Date.now())/1000);draw();
+if(left<=0){stop();ts.textContent='Mulai lagi';tc.textContent='Selesai. Om Santih, Santih, Santih, Om.';left=D;beep();return}
+const el=D-left;tc.textContent=Math.floor(el/4)%2===0?'Tarik napas…':'Hembuskan…'};
+ts.onclick=()=>{if(run){stop();ts.textContent='Lanjut';tc.textContent='Dijeda';return}
+if(!ac&&(window.AudioContext||window.webkitAudioContext)){try{ac=new (window.AudioContext||window.webkitAudioContext)()}catch(e){}}
+end=Date.now()+left*1000;run=true;ts.textContent='Jeda';clearInterval(tI);tI=setInterval(tick,200);tick()};
+tr.onclick=()=>{stop();left=D;draw();ts.textContent='Mulai';tc.textContent='Siap dimulai'};
+draw()}
+
+function route(){const h=location.hash,a=document.getElementById('app'),m=h.match(/^#\/m\/(\d+)/),l=h.match(/^#\/l\/(\d+)/);clearInterval(tI);
+if(m&&+m[1]<T.length)a.innerHTML=topic(+m[1]);
+else if(l&&+l[1]<T.length){a.innerHTML=quiz(+l[1]);bind(+l[1])}
+else if(h==='#/l')a.innerHTML=latList();
+else{a.innerHTML=home();bindTimer()}
+scrollTo(0,0)}
+addEventListener('hashchange',route);route();
+const thm=document.getElementById('thm'),root=document.documentElement;
+const setTh=t=>{root.dataset.theme=t;thm.innerHTML=t==='dark'?'🌙 Gelap':'☀️ Cerah';thm.setAttribute('aria-label',t==='dark'?'Ganti ke tema cerah':'Ganti ke tema gelap');try{localStorage.setItem('theme',t)}catch(e){}};
+thm.onclick=()=>setTh(root.dataset.theme==='dark'?'light':'dark');
+setTh(root.dataset.theme==='dark'?'dark':'light');
+const intro=document.getElementById('intro');
+const done=()=>{if(!intro.isConnected)return;root.classList.add('go');intro.classList.add('out');setTimeout(()=>intro.remove(),900)};
+if(matchMedia('(prefers-reduced-motion: reduce)').matches){intro.remove();root.classList.add('go')}
+else{intro.querySelector('.bl').innerHTML=mand();intro.onclick=done;setTimeout(done,2800)}
+</script>
+</body>
+</html>
