@@ -11,7 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Nunito:wght@400;600;700&family=Noto+Sans+Devanagari:wght@600&display=swap" rel="stylesheet">
 <script>var t=null;try{t=localStorage.getItem('theme')}catch(e){}if(t!=='dark'&&t!=='light')t=(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';document.documentElement.dataset.theme=t</script>
 <style>
-:root{color-scheme:light;--maroon:#5a0f1e;--deep:#22092b;--saffron:#f28a1b;--gold:#f2c14e;--lotus:#b8285f;--bg:#fff8ec;--ink:#2a1220;--ok:#1f7a3f;--bad:#b3261e}
+:root{color-scheme:light;--maroon:#5a0f1e;--deep:#22092b;--saffron:#f28a1b;--gold:#f2c14e;--lotus:#d9457a;--bg:#fff8ec;--ink:#2a1220;--ok:#1f7a3f;--bad:#b3261e}
 *{box-sizing:border-box}
 body{margin:0;font-family:Nunito,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65}
 h1,h2,h3,h4,.brand{font-family:Marcellus,Georgia,serif;font-weight:400;line-height:1.25}
@@ -88,7 +88,7 @@ footer{text-align:center;padding:1.5rem;background:var(--deep);color:var(--gold)
 .tg-btn:hover{background:var(--gold);color:var(--deep)}
 .lk{align-items:center}
 footer .cp{opacity:.85;border-top:1px solid rgba(242,193,78,.3);padding-top:.8rem}
-html[data-theme=dark]{--bg:#150a1c;--ink:#f3e6d3;--lotus:#ff8fb8;color-scheme:dark}
+html[data-theme=dark]{--bg:#150a1c;--ink:#f3e6d3;color-scheme:dark}
 html[data-theme=dark] .card,html[data-theme=dark] .cta,html[data-theme=dark] .two>div,html[data-theme=dark] .note,html[data-theme=dark] table,html[data-theme=dark] .quiz{background:#241231}
 html[data-theme=dark] .card,html[data-theme=dark] .cta,html[data-theme=dark] .quiz{border-color:#5b3b2e}
 html[data-theme=dark] th,html[data-theme=dark] td{border-color:#4a3340}
@@ -121,21 +121,21 @@ html.go .nav{animation:drop .6s ease both}
 html.go #app > .anim-seq{
   opacity:0;
   transform:translateY(18px);
-  animation:softRise .55s cubic-bezier(.22,.75,.25,1) forwards;
+  animation:softRise .85s cubic-bezier(.22,.75,.25,1) forwards;
 }
-html.go #app > .anim-seq:nth-child(2){animation-delay:0.1s}
-html.go #app > .anim-seq:nth-child(3){animation-delay:0.2s}
-html.go #app > .anim-seq:nth-child(4){animation-delay:0.3s}
-html.go #app > .anim-seq:nth-child(5){animation-delay:0.4s}
-html.go #app > .anim-seq:nth-child(6){animation-delay:0.5s}
+html.go #app > .anim-seq:nth-child(2){animation-delay:.22s}
+html.go #app > .anim-seq:nth-child(3){animation-delay:.44s}
+html.go #app > .anim-seq:nth-child(4){animation-delay:.66s}
+html.go #app > .anim-seq:nth-child(5){animation-delay:.88s}
+html.go #app > .anim-seq:nth-child(6){animation-delay:1.10s}
 html.go .card,html.go .gal figure{
-  animation:softRise .5s cubic-bezier(.22,.75,.25,1) both;
+  animation:softRise .75s cubic-bezier(.22,.75,.25,1) both;
 }
-html.go .card:nth-child(2),html.go .gal figure:nth-child(2){animation-delay:0.07s}
-html.go .card:nth-child(3),html.go .gal figure:nth-child(3){animation-delay:0.14s}
-html.go .card:nth-child(4),html.go .gal figure:nth-child(4){animation-delay:0.22s}
-html.go .card:nth-child(5){animation-delay:0.29s}
-html.go .card:nth-child(6){animation-delay:0.36s}
+html.go .card:nth-child(2),html.go .gal figure:nth-child(2){animation-delay:.16s}
+html.go .card:nth-child(3),html.go .gal figure:nth-child(3){animation-delay:.32s}
+html.go .card:nth-child(4),html.go .gal figure:nth-child(4){animation-delay:.48s}
+html.go .card:nth-child(5){animation-delay:.64s}
+html.go .card:nth-child(6){animation-delay:.80s}
 @keyframes softRise{
   from{opacity:0;transform:translateY(18px)}
   to{opacity:1;transform:translateY(0)}
@@ -146,8 +146,8 @@ html.go .card:nth-child(6){animation-delay:0.36s}
 @keyframes outF{to{opacity:0;transform:translateX(-50px)}}
 @keyframes outB{to{opacity:0;transform:translateX(50px)}}
 #app{overflow-x:clip}
-html.go #app.in.f{animation:inF .4s cubic-bezier(.22,.75,.25,1) both}
-html.go #app.in.b{animation:inB .4s cubic-bezier(.22,.75,.25,1) both}
+html.go #app.in.f{animation:inF .65s cubic-bezier(.22,.75,.25,1) both}
+html.go #app.in.b{animation:inB .65s cubic-bezier(.22,.75,.25,1) both}
 html.go #app.out.f{animation:outF .22s ease-in both}
 html.go #app.out.b{animation:outB .22s ease-in both}
 @media(prefers-reduced-motion:reduce){html.go #app.in,html.go #app.out{animation:none}}
@@ -329,7 +329,7 @@ html.swap *,html.swap *::before,html.swap *::after{transition:none!important;ani
 .qlife{display:flex;flex-wrap:wrap;gap:.5rem;margin:.9rem 0 0}
 .qlb{background:#fff8ec;border:2px dashed var(--saffron);border-radius:12px;padding:.35rem .8rem;font:inherit;font-weight:700;cursor:pointer;color:inherit}.qlb small{font-weight:400;opacity:.75}.qlb:hover:not(:disabled){background:#ffe9c4}.qlb:disabled{opacity:.45;cursor:default;border-style:solid}
 .qo.gone{opacity:.25;text-decoration:line-through}.qo.gone:hover{transform:none}
-.cfw{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:600}.cfw i{position:absolute;top:-16px;width:9px;height:14px;border-radius:2px;animation:cf linear forwards}
+.cfw{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:250}.cfw i{position:absolute;top:-16px;width:9px;height:14px;border-radius:2px;animation:cf linear forwards}
 @keyframes cf{to{transform:translateY(110vh) rotate(720deg);opacity:.8}}
 html[data-theme=dark] .qstr{background:#4a2a1a;color:#ffc58a}
 html[data-theme=dark] .qlb{background:#33193f}html[data-theme=dark] .qlb:hover:not(:disabled){background:#4a2a5a}
@@ -342,27 +342,6 @@ button,.btn,.qt{touch-action:manipulation;-webkit-tap-highlight-color:transparen
 .anw{border:2px dashed var(--gold);border-radius:16px;padding:1rem;margin:1.5rem 0;background:#fff}.anl{display:grid;gap:.5rem;margin:.8rem 0}.anb{text-align:left;font:inherit;padding:.6rem .8rem;border-radius:12px;border:2px solid #ecd9b0;background:#fff8ec;color:inherit;cursor:pointer;min-height:44px}.anb.ok{border-color:var(--ok);opacity:.6}.anb.no{border-color:var(--bad);animation:shk .3s}@keyframes shk{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
 html[data-theme=dark] .qexp,html[data-theme=dark] .anw{background:#241231}html[data-theme=dark] .anb{background:#33193f;border-color:#5b3b2e}
 .tw{overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%;margin:1rem 0}.tw table{margin:0;min-width:520px}#qz{scroll-margin-top:100px}@media(max-width:480px){.nav{padding:.4rem .7rem;gap:.3rem}.nav .brand{font-size:1.05rem}.nav .lk{gap:.35rem;width:100%}.nav .lk a,.nav .tg-btn{padding:.25rem .65rem;font-size:.88rem;min-height:36px}}
-.sr{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
-.qhint{font-size:.85rem;opacity:.85}
-@media(pointer:coarse){.qhint{display:none}}
-h1:focus{outline:none}
-/* kartu juara: teks terbaca di tema cerah + muncul setelah overlay selesai */
-.champion{color:#fff3d6}
-.champion .big{color:var(--gold)}
-.champion .qok{color:#6fe39a}
-.champion .btn.alt{border-color:var(--gold);color:var(--gold)}
-.champion{animation-delay:2.4s}.champion-badge{animation-delay:2.6s}.champion h2{animation-delay:2.8s}.champion-title{animation-delay:2.9s}.champion-msg{animation-delay:3s}.champion-stamp{animation-delay:3.4s}
-html[data-theme=dark] .btn.alt:hover,.tmr .btn.alt:hover,.champion .btn.alt:hover{color:var(--deep)}
-/* dialog konfirmasi */
-#cfm{position:fixed;inset:0;z-index:700;background:rgba(20,6,26,.7);display:flex;align-items:center;justify-content:center;padding:1rem;backdrop-filter:blur(3px)}
-#cfm .box{background:var(--bg);color:var(--ink);border:2px solid var(--gold);border-top-width:6px;border-radius:18px;padding:1.4rem;max-width:380px;width:100%;text-align:center;animation:rise .25s ease both}
-#cfm h2{margin:0 0 .4rem;color:var(--maroon);font-size:1.3rem}
-#cfm p{margin:.2rem 0 1.1rem}
-#cfm .row{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}
-#cfm .btn.danger{background:var(--bad);color:#fff}
-#cfm .btn.danger:hover{background:#8f1d17;color:#fff}
-html[data-theme=dark] #cfm h2{color:var(--gold)}
-@media(prefers-reduced-motion:reduce){#cfm .box{animation:none}}
 </style>
 </head>
 <body>
@@ -408,7 +387,7 @@ const ic2=ppl(250,76)+ppl(300,70)+ppl(350,76)+`<path d="M262 106H338" stroke="${
 const ic3=ppl(465,88)+ppl(525,88)+`<path d="M495 72C470 54 482 38 495 51C508 38 520 54 495 72Z" fill="${LT}" stroke="${G}" stroke-width="1.5"/>`;
 return sv('0 0 600 250','Penerapan Sad Darsana: saring sebelum sharing, gotong royong, Tat Twam Asi',P(20,'Nyaya','Saring sebelum','sharing',ic1)+P(215,'Mimamsa','Gotong royong','menjalankan dharma',ic2)+P(410,'Wedanta','Tat Twam Asi','toleransi, welas asih',ic3))},
 ()=>{const nd=(x,y,a,b)=>`<ellipse cx="${x}" cy="${y}" rx="66" ry="34" fill="#3a0f2e" stroke="${G}" stroke-width="2"/>${tx(x,y-2,a,16,G,1)}${tx(x,y+17,b,14,CR)}`;
-return sv('0 0 600 270','Tri Hita Karana: harmoni dengan Tuhan, sesama, dan alam',`<path d="M300 40L110 215H490Z" fill="rgba(242,138,27,.12)" stroke="${G}" stroke-width="2.5"/><circle cx="300" cy="158" r="54" fill="rgba(242,193,78,.16)" stroke="${G}" stroke-width="2" stroke-dasharray="5 5"/>${tx(300,153,'Tri Hita',18,G,1)}${tx(300,175,'Karana',18,G,1)}`+nd(300,40,'Parahyangan','Tuhan')+nd(110,215,'Pawongan','Sesama')+nd(490,215,'Palemahan','Alam'))}
+return sv('0 0 600 270','Tri Hita Karana: harmoni dengan Tuhan, sesama, dan alam',`<path d="M300 40L110 215H490Z" fill="rgba(242,138,27,.12)" stroke="${G}" stroke-width="2.5"/><circle cx="300" cy="158" r="54" fill="rgba(242,193,78,.16)" stroke="${G}" stroke-width="2" stroke-dasharray="5 5"/>${tx(300,153,'Tri Hita',18,G,1)}${tx(300,175,'Karana',18,G,1)}`+nd(300,40,'Parhyangan','Tuhan')+nd(110,215,'Pawongan','Sesama')+nd(490,215,'Palemahan','Alam'))}
 ];
 const CAP=['Darsana: pandangan tentang kebenaran, terbagi menjadi Astika dan Nastika','Enam pintu (Darsana) menuju satu tujuan: Moksa','Empat tiang penopang pengetahuan yang benar (Catur Pramana)','Delapan anak tangga Astangga Yoga','Sad Darsana dalam kehidupan sehari-hari','Tri Hita Karana: harmoni dengan Tuhan, sesama, dan alam'];
 const pic=n=>`<figure class="pic">${PIC[n]()}<figcaption>${CAP[n]}</figcaption></figure>`;
@@ -423,9 +402,8 @@ try{const mq=matchMedia('(prefers-color-scheme: dark)'),ch2=e=>{let v=null;try{v
 const intro=document.getElementById('intro');
 const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
 const done=()=>{root.classList.add('go');if(intro&&intro.isConnected){intro.classList.add('out');setTimeout(()=>intro.remove(),900)}};
-let introSeen=false;try{introSeen=sessionStorage.getItem('sd_intro')==='1'}catch(e){}
-if(!intro||reduce||introSeen){if(intro)intro.remove();root.classList.add('go')}
-else{try{sessionStorage.setItem('sd_intro','1')}catch(e){}intro.querySelector('.bl').innerHTML=mand();intro.onclick=done;setTimeout(done,2800)}
+if(!intro||reduce){if(intro)intro.remove();root.classList.add('go')}
+else{intro.querySelector('.bl').innerHTML=mand();intro.onclick=done;setTimeout(done,2800)}
 
 // Router hash sederhana dengan animasi geser antar halaman
 function startRouter(render,rank){
@@ -493,8 +471,8 @@ ${(()=>{const n=BAB.filter((_,i)=>passed(i)).length,f=PROG.findIndex((v,i)=>!pas
 ${DCHIPS()}${EXTRA()}</section>`;
 
 const timer=()=>`<section class="tmr" aria-labelledby="tmh"><h2 id="tmh">Yoga 2 Menit Sebelum Belajar</h2><p>Tenangkan diri dulu sebelum mulai belajar:</p><ol><li><b>Asana:</b> duduk tegak dan rileks, bahu turun, mata terpejam.</li><li><b>Pranayama:</b> tarik napas perlahan, lalu hembuskan, ikuti petunjuk di bawah.</li><li><b>Dharana/Dhyana:</b> pusatkan pikiran pada napas, kembalikan bila pikiran melayang.</li></ol>
-<div class="ring"><svg viewBox="0 0 200 200" aria-hidden="true"><circle class="bg" cx="100" cy="100" r="90"/><circle class="fg" id="tf" cx="100" cy="100" r="90"/></svg><div class="tx"><div class="tm" id="tt" role="timer" aria-live="off">02:00</div><div class="cue" id="tc" aria-live="off">Siap dimulai</div></div></div>
-<span class="sr" id="tsr" role="status"></span><div class="row"><button class="btn" type="button" id="ts">Mulai</button><button class="btn alt" type="button" id="tr">Atur ulang</button></div></section>`;
+<div class="ring"><svg viewBox="0 0 200 200" aria-hidden="true"><circle class="bg" cx="100" cy="100" r="90"/><circle class="fg" id="tf" cx="100" cy="100" r="90"/></svg><div class="tx"><div class="tm" id="tt" role="timer" aria-live="off">02:00</div><div class="cue" id="tc" aria-live="polite">Siap dimulai</div></div></div>
+<div class="row"><button class="btn" type="button" id="ts">Mulai</button><button class="btn alt" type="button" id="tr">Atur ulang</button></div></section>`;
 
 const ANU=[['Pratijna','pernyataan yang dibuktikan','Gunung itu berapi.'],['Hetu','alasan','Sebab gunung itu mengeluarkan asap.'],['Udaharana','contoh umum','Di mana ada asap, di situ ada api, seperti di dapur.'],['Upanaya','penerapan pada kasus','Gunung itu memang berasap.'],['Nigamana','kesimpulan','Jadi, gunung itu berapi.']];
 const anuW=()=>`<section class="anw" id="anu"><h3>🧩 Latihan: Susun 5 Tahap Anumana</h3><p id="anm" aria-live="polite"></p><div id="anl" class="anl"></div><ol id="ano"></ol><button type="button" class="btn alt" id="anr">🔄 Ulangi</button></section>`;
@@ -507,20 +485,19 @@ const topic=n=>{const x=BAB[n];return `<article class="wrap topic"><a href="#/">
 
 let tI=null;
 function bindTimer(){const ts=document.getElementById('ts');if(!ts)return;
-const D=120,tt=document.getElementById('tt'),tc=document.getElementById('tc'),tf=document.getElementById('tf'),tr=document.getElementById('tr'),tsr=document.getElementById('tsr'),C=2*Math.PI*90;
-const say=t=>{if(!tsr)return;tsr.textContent='';setTimeout(()=>{tsr.textContent=t},60)};
+const D=120,tt=document.getElementById('tt'),tc=document.getElementById('tc'),tf=document.getElementById('tf'),tr=document.getElementById('tr'),C=2*Math.PI*90;
 let left=D,end=0,run=false,ac=null;
 const fmt=x=>String(Math.floor(x/60)).padStart(2,'0')+':'+String(x%60).padStart(2,'0');
 const draw=()=>{const sec=Math.ceil(left);tt.textContent=fmt(sec);tf.style.strokeDashoffset=C*(1-left/D)};
 const beep=()=>{try{ac=ac||new (window.AudioContext||window.webkitAudioContext)();[0,.6,1.2].forEach(d=>{const o=ac.createOscillator(),g=ac.createGain();o.frequency.value=528;o.connect(g);g.connect(ac.destination);const t=ac.currentTime+d;g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(.3,t+.05);g.gain.exponentialRampToValueAtTime(.0001,t+.5);o.start(t);o.stop(t+.55)})}catch(e){}};
 const stop=()=>{clearInterval(tI);tI=null;run=false};
 const tick=()=>{left=Math.max(0,(end-Date.now())/1000);draw();
-if(left<=0){stop();ts.textContent='Mulai lagi';tc.textContent='Selesai. Om Santih, Santih, Santih, Om.';say('Selesai. Om Santih, Santih, Santih, Om.');left=D;beep();return}
+if(left<=0){stop();left=D;draw();ts.textContent='Mulai lagi';tc.textContent='Selesai. Om Santih, Santih, Santih, Om.';beep();return}
 const el=D-left;tc.textContent=Math.floor(el/4)%2===0?'Tarik napas…':'Hembuskan…'};
-ts.onclick=()=>{if(run){stop();ts.textContent='Lanjut';tc.textContent='Dijeda';say('Dijeda');return}
+ts.onclick=()=>{if(run){stop();ts.textContent='Lanjut';tc.textContent='Dijeda';return}
 if(!ac&&(window.AudioContext||window.webkitAudioContext)){try{ac=new (window.AudioContext||window.webkitAudioContext)()}catch(e){}}
-end=Date.now()+left*1000;run=true;ts.textContent='Jeda';say('Timer dimulai');clearInterval(tI);tI=setInterval(tick,200);tick()};
-tr.onclick=()=>{stop();left=D;draw();ts.textContent='Mulai';tc.textContent='Siap dimulai';say('Timer diatur ulang')};
+end=Date.now()+left*1000;run=true;ts.textContent='Jeda';clearInterval(tI);tI=setInterval(tick,200);tick()};
+tr.onclick=()=>{stop();left=D;draw();ts.textContent='Mulai';tc.textContent='Siap dimulai'};
 draw()}
 
 
@@ -566,7 +543,7 @@ const c=document.querySelector(`[data-dn="${n}"]`);if(c)c.classList.add('seen');
 const t=document.getElementById('zpt');if(t){t.textContent=zpgTxt();document.getElementById('zpb').style.width=ZS.length/6*100+'%'}}
 function closeZ(){if(!zmd||!zmd.classList.contains('show'))return;zmd.classList.remove('show');document.body.style.overflow='';if(zlast&&zlast.focus)try{zlast.focus({preventScroll:true})}catch(e){}}
 document.getElementById('zx').onclick=closeZ;zmd.onclick=e=>{if(e.target===zmd)closeZ()};
-document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeZ();return}if(e.key!=='Tab'||!zmd.classList.contains('show'))return;const f=[...zmd.querySelectorAll('button:not([disabled]),a[href]')].filter(x=>x.offsetParent!==null);if(!f.length)return;const fi=f[0],la=f[f.length-1],ac=document.activeElement;if(!zmd.contains(ac)){e.preventDefault();fi.focus()}else if(e.shiftKey&&ac===fi){e.preventDefault();la.focus()}else if(!e.shiftKey&&ac===la){e.preventDefault();fi.focus()}});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeZ()});
 // beranda
 function bindHome(){
 const io=('IntersectionObserver' in window&&!reduce)?new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1}):null;
@@ -659,7 +636,7 @@ const saveP=()=>{try{localStorage.setItem(PK,JSON.stringify(PROG))}catch(e){}};
 const passed=i=>PROG[i]!==null&&PROG[i]>=PASS;
 const unl=i=>i===0||passed(i-1);
 const allP=()=>BAB.every((_,i)=>passed(i));
-const quiz=()=>`<article class="wrap topic"><a href="#/">← Beranda</a><h1>Kuis Sad Darsana</h1><p>Jawab dengan tenang tanpa batas waktu, rangkai <b>combo 🔥</b>, dan pakai bantuan <b>50:50</b> atau <b>petunjuk gambar</b> (masing-masing 1× per sesi). Bab berikutnya hanya terbuka jika <b>semua soal dalam bab dijawab benar</b>. Setelah semua bab lulus, <b>🎲 Tantangan Campuran (5 soal)</b> ikut terbuka untuk menaikkan level.</p><p class="qhint">⌨️ Pintasan keyboard: tekan A–D (atau 1–4) untuk menjawab, F untuk 50:50, H untuk petunjuk gambar.</p><div class="qz" id="qz"></div><p style="text-align:center"><button type="button" class="btn alt" id="rp">Reset progres</button></p></article>`;
+const quiz=()=>`<article class="wrap topic"><a href="#/">← Beranda</a><h1>Kuis Sad Darsana</h1><p>Jawab dengan tenang tanpa batas waktu, rangkai <b>combo 🔥</b>, dan pakai bantuan <b>50:50</b> atau <b>petunjuk gambar</b> (masing-masing 1× per sesi). Bab berikutnya hanya terbuka jika <b>semua soal dalam bab dijawab benar</b>. Setelah semua bab lulus, <b>🎲 Tantangan Campuran (5 soal)</b> ikut terbuka untuk menaikkan level.</p><div class="qz" id="qz"></div><p style="text-align:center"><button type="button" class="btn alt" id="rp">Reset progres</button></p></article>`;
 // --- poin, level, suara
 const XK='sd_xp';
 const loadX=()=>{try{const x=JSON.parse(localStorage.getItem(XK));if(x&&Array.isArray(x.b)&&x.b.length===BAB.length)return{b:x.b.map(v=>+v||0),m:+x.m||0}}catch(e){}return{b:BAB.map(()=>0),m:0}};
@@ -673,8 +650,8 @@ let qkh=null;
 function bind(){const box=document.getElementById('qz');if(!box)return;
 const AB='ABCD',hm=location.hash.match(/^#\/l\/(\d+|mix)/);
 let ch=0,mix=false,base=null,Q=[],ix=0,A=[],pts=0,streak=0,maxS=0,uF=false,uH=false,HID={},HNT={},GAIN={},note='';
-let f=PROG.findIndex((v,i)=>!passed(i));if(f<0)f=BAB.length-1;ch=f;
-if(hm){if(hm[1]==='mix'){if(allP())mix=true;else note='Tantangan Campuran masih terkunci. Lulus semua bab dengan nilai sempurna dulu.'}else if(+hm[1]<BAB.length){if(unl(+hm[1]))ch=+hm[1];else note='Bab '+(+hm[1]+1)+' masih terkunci. Selesaikan bab sebelumnya dulu.'}}
+let f=PROG.findIndex((v,i)=>!passed(i));if(f<0){f=BAB.length-1;mix=!hm;}ch=f;
+if(hm){if(hm[1]==='mix'){if(allP())mix=true;else note='Tantangan Campuran masih terkunci. Lulus semua bab dengan nilai sempurna dulu.'}else if(+hm[1]<BAB.length){mix=false;if(unl(+hm[1]))ch=+hm[1];else note='Bab '+(+hm[1]+1)+' masih terkunci. Selesaikan bab sebelumnya dulu.'}}
 const top=()=>box.scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'});
 const hud=()=>{return `<div class="qhud"><div class="lv"><b>Lv ${lvl()}</b><span>${gelar()}</span><i><u style="width:${xpTot()%1000/10}%"></u></i><small>${xpTot()} XP</small></div></div>`};
 const tabs=()=>`<div id="hudw">${hud()}</div><div class="qtabs" role="group" aria-label="Pilih bab">${BAB.map((x,i)=>{const lk=!unl(i),pd=passed(i);return `<button type="button" class="qt${i===ch&&!mix?' cur':''}${pd?' done':''}${lk?' lock':''}" data-i="${i}"${lk?' disabled':''} aria-label="Bab ${i+1}${lk?' terkunci':pd?' lulus':''}"><span>${lk?'🔒':pd?'✅':i+1}</span><small>Bab ${i+1}</small></button>`}).join('')}<button type="button" class="qt qmix${mix?' cur':''}${allP()?'':' lock'}" data-i="mix"${allP()?'':' disabled'} aria-label="Tantangan campuran${allP()?'':' terkunci'}"><span>${allP()?'🎲':'🔒'}</span><small>Campuran</small></button></div>${note?`<p class="qnote">${note}</p>`:''}<h2 class="qh">${mix?'🎲 Tantangan Campuran · 5 soal acak dari semua bab':'Bab '+(ch+1)+': '+BAB[ch].t}</h2>`;
@@ -686,7 +663,7 @@ const startMix=()=>{mix=true;base=null;Q=sh(BANK.flatMap((b,i)=>b.map(q=>mk(q,i)
 const nOk=()=>A.filter((v,k)=>v!==null&&v>=0&&Q[k].o[v].c).length;
 const drawQ=()=>{const q=Q[ix],a=A[ix],done=A.filter(v=>v!==null).length,hid=HID[ix]||[],ok=a!==null&&a>=0&&q.o[a].c;
 const opts=q.o.map((o,j)=>{let c='qo';if(a!==null){if(o.c)c+=' ok';else if(j===a)c+=' bad'}else if(hid.includes(j))c+=' gone';return `<button type="button" class="${c}" data-j="${j}"${a!==null||hid.includes(j)?' disabled':''}><b>${AB[j]}</b><span>${o.t}</span></button>`}).join('');
-const life=a===null?`<div class="qlife"><button type="button" class="qlb" id="lF" aria-keyshortcuts="F"${uF||q.o.length<3?' disabled':''}>✂️ 50:50 <small>${uF?'terpakai':q.o.length<3?'tidak untuk B/S':'1×'}</small></button><button type="button" class="qlb" id="lH" aria-keyshortcuts="H"${uH?' disabled':''}>🖼️ Petunjuk gambar <small>${uH?'terpakai':'1× · −20 poin'}</small></button></div>`:'';
+const life=a===null?`<div class="qlife"><button type="button" class="qlb" id="lF"${uF||q.o.length<3?' disabled':''}>✂️ 50:50 <small>${uF?'terpakai':q.o.length<3?'tidak untuk B/S':'1×'}</small></button><button type="button" class="qlb" id="lH"${uH?' disabled':''}>🖼️ Petunjuk gambar <small>${uH?'terpakai':'1× · −20 poin'}</small></button></div>`:'';
 const fig=(HNT[ix]||(a!==null&&!ok))?`<figure class="pic qpic">${PIC[q.ch]()}<figcaption><b>Petunjuk gambar:</b> ${CAP[q.ch]}</figcaption></figure>`:'';
 let fb='';if(a!==null){fb=`<p class="qfb ${ok?'ok':'bad'}" aria-live="polite">${ok?`✅ Benar! +${GAIN[ix]} poin${streak>=2?` · 🔥 combo ×${streak}`:''}`:`❌ Kurang tepat.`}</p>${!ok?`<p class="qanswer">✅ <b>Jawaban benar:</b> ${q.o.find(o=>o.c).t}</p>`:''}${q.e?`<p class="qexp">💡 <b>Penjelasan:</b> ${q.e}</p>`:''}<button type="button" class="btn" id="nx">${ix<Q.length-1?'Soal berikutnya →':'Lihat hasil 🏆'}</button>`}
 box.innerHTML=`${tabs()}<div class="qtop"><span>Soal ${ix+1} dari ${Q.length}</span>${streak>=2?`<span class="qstr" aria-label="combo ${streak}">🔥 ×${streak}</span>`:''}<span class="qsc">⭐ ${pts}</span></div><div class="qbar"><i style="width:${done/Q.length*100}%"></i></div><p class="qq">${q.q}</p><div role="group" aria-label="Pilihan jawaban">${opts}</div>${life}${fig}${fb}`;
@@ -707,35 +684,38 @@ const up=lvl()>oldL,wr=Q.filter((q,k)=>!(A[k]>=0&&q.o[A[k]].c));
 const finishedAll=mix&&pass&&allP();
 const gt=finishedAll?'Sang Penakluk Darsana':p===100?'Maha Rsi':p>=90?'Bijak Darsana':p>=70?'Penekun Darsana':p>=50?'Pencari Kebenaran':'Sisya Pemula';
 const msg=mix?(pass?'Mantap! Kamu menguasai materi dari berbagai bab.':'Belum maksimal. Coba lagi atau baca ulang materinya.'):finishedAll?'🎉 Selamat! Kamu telah menyelesaikan seluruh kuis Darsana!':pass?(last?'🎓 Selamat! Semua bab sudah lulus dan 🎲 Tantangan Campuran terbuka (5 soal). Om Santih, Santih, Santih, Om.':'Sempurna! Semua jawaban benar, bab berikutnya sudah terbuka.'):`Belum lulus. Semua soal harus benar untuk lanjut ke bab berikutnya. Baca materinya lagi, lalu ulangi.`;
-box.innerHTML=`${tabs()}<div class="qres${finishedAll?' champion':pass?' victory':''}">${finishedAll?`<span class="champion-spark s1">✦</span><span class="champion-spark s2">✧</span><span class="champion-spark s3">✦</span><span class="champion-spark s4">✧</span><div class="champion-badge">🏆</div><h2>🎉 SELAMAT! 🎉</h2><div class="champion-title">SANG PENAKLUK DARSANA</div><p class="champion-msg">Kamu telah menyelesaikan seluruh kuis Darsana!</p><div class="champion-stamp">🏅 PENCAPAIAN TERBUKA</div>`:`<div class="stars" aria-label="${sr} dari 3 bintang">${'⭐'.repeat(sr)}${'☆'.repeat(3-sr)}</div><h2>${pass?'Lulus!':'Belum lulus'}</h2>`}<p class="big">${pts}</p><p>poin${nb?' · 🏅 <b>Rekor baru!</b>':''} <small>(rekor ${Math.max(pts,prevB)})</small></p><p>Benar <b>${ok}</b> · Salah <b>${N-ok}</b> dari ${N} soal (${p}%) · Combo terbaik 🔥 ×${maxS}</p>${up?`<p class="qok">🎉 Naik ke Level ${lvl()}: ${gelar()}!</p>`:''}${finishedAll?'':`<p class="${pass?'qok':'qnote'}">${msg}</p>`}<div class="row">${pass&&!mix&&!last?`<button type="button" class="btn" id="go">Lanjut ke Bab ${ch+2} →</button>`:''}${wr.length&&!mix?'<button type="button" class="btn alt" id="rw">🎯 Ulangi soal yang salah saja</button>':''}<button type="button" class="btn${pass&&!mix&&!last?' alt':''}" id="rt">🔄 Ulangi</button>${mix||!allP()?'':'<button type="button" class="btn alt" id="gm">🎲 Tantangan Campuran</button>'}</div></div>`;
+box.innerHTML=`${tabs()}<div class="qres${finishedAll?' champion':pass?' victory':''}">${finishedAll?`<span class="champion-spark s1">✦</span><span class="champion-spark s2">✧</span><span class="champion-spark s3">✦</span><span class="champion-spark s4">✧</span><div class="champion-badge">🏆</div><h2>🎉 SELAMAT! 🎉</h2><div class="champion-title">SANG PENAKLUK DARSANA</div><p class="champion-msg">Kamu telah menyelesaikan seluruh kuis Darsana!</p><div class="champion-stamp">🏅 PENCAPAIAN TERBUKA</div>`:`<div class="stars" aria-label="${sr} dari 3 bintang">${'⭐'.repeat(sr)}${'☆'.repeat(3-sr)}</div><h2>${pass?'Lulus!':'Belum lulus'}</h2>`}<p class="big">${pts}</p><p>poin${nb?' · 🏅 <b>Rekor baru!</b>':''} <small>(rekor ${Math.max(pts,prevB)})</small></p><p>Benar <b>${ok}</b> · Salah <b>${N-ok}</b> dari ${N} soal (${p}%) · Combo terbaik 🔥 ×${maxS}</p>${up?`<p class="qok">🎉 Naik ke Level ${lvl()}: ${gelar()}!</p>`:''}<p class="${pass?'qok':'qnote'}">${msg}</p><div class="row">${pass&&!mix&&!last?`<button type="button" class="btn" id="go">Lanjut ke Bab ${ch+2} →</button>`:''}${wr.length&&!mix?'<button type="button" class="btn alt" id="rw">🎯 Ulangi soal yang salah saja</button>':''}<button type="button" class="btn${pass&&!mix&&!last?' alt':''}" id="rt">🔄 Ulangi</button>${mix||!allP()?'':'<button type="button" class="btn alt" id="gm">🎲 Tantangan Campuran</button>'}</div></div>`;
 bindUI();const g=box.querySelector('#go');if(g)g.onclick=()=>{startCh(ch+1);top()};box.querySelector('#rt').onclick=()=>{mix?startMix():startCh(ch);top()};const gm=box.querySelector('#gm');if(gm)gm.onclick=()=>{startMix();top()};
 const rw=box.querySelector('#rw');if(rw)rw.onclick=()=>{const b2={ok,n:N,pts};Q=sh(wr.map(q=>({q:q.q,ch:q.ch,e:q.e,o:sh(q.o)})));base=b2;init();top()};
 if(finishedAll){confetti();victoryFx(true)}top()};
-document.getElementById('rp').onclick=()=>askC('Hapus progres kuis?','Semua progres, poin, dan level kuis akan dihapus, lalu kamu mulai lagi dari Bab 1. Tindakan ini tidak bisa dibatalkan.','Ya, hapus',()=>{PROG=BAB.map(()=>null);saveP();XP={b:BAB.map(()=>0),m:0};saveX();note='';startCh(0);top()});
+const rp=document.getElementById('rp');
+if(rp)rp.onclick=()=>{
+  if(document.getElementById('resetConfirm'))return;
+  const modal=document.createElement('div');modal.id='resetConfirm';modal.setAttribute('role','dialog');modal.setAttribute('aria-modal','true');modal.setAttribute('aria-labelledby','resetConfirmTitle');
+  modal.style.cssText='position:fixed;inset:0;z-index:1000;background:rgba(20,7,25,.78);display:flex;align-items:center;justify-content:center;padding:1rem;';
+  modal.innerHTML=`<div style="width:min(100%,420px);background:var(--bg);color:var(--ink);border:2px solid var(--gold);border-radius:18px;padding:1.3rem;box-shadow:0 16px 60px #0008;text-align:center"><h2 id="resetConfirmTitle" style="margin:.2rem 0 .7rem">🔄 Reset semua progres?</h2><p>Semua kelulusan bab, poin XP, dan level akan dihapus. Kamu akan mulai lagi dari Bab 1.</p><div class="row" style="justify-content:center"><button type="button" class="btn alt" id="resetCancel">Batal</button><button type="button" class="btn" id="resetDo">Ya, reset progres</button></div></div>`;
+  document.body.appendChild(modal);
+  const close=()=>modal.remove();
+  modal.querySelector('#resetCancel').onclick=close;
+  modal.addEventListener('click',e=>{if(e.target===modal)close()});
+  modal.querySelector('#resetDo').onclick=()=>{
+    PROG=BAB.map(()=>null);saveP();XP={b:BAB.map(()=>0),m:0};saveX();
+    try{localStorage.removeItem(PK);localStorage.removeItem(XK)}catch(e){}
+    PROG=BAB.map(()=>null);saveP();XP={b:BAB.map(()=>0),m:0};saveX();
+    note='';close();startCh(0);top();
+  };
+  modal.querySelector('#resetCancel').focus();
+};
 
-qkh=e=>{if(e.ctrlKey||e.metaKey||e.altKey||!box.querySelector('.qq')||A[ix]!==null)return;const k=e.key.toLowerCase();if(k==='f'){useF();return}if(k==='h'){useH();return}let j='1234'.indexOf(k);if(j<0)j='abcd'.indexOf(k);if(j>=0&&j<Q[ix].o.length&&!(HID[ix]||[]).includes(j))answer(j)};
+qkh=e=>{if(e.ctrlKey||e.metaKey||e.altKey||!box.querySelector('.qq')||A[ix]!==null)return;const k=e.key.toLowerCase();if(k==='f'){useF();return}if(k==='h'){useH();return}const j='1234'.indexOf(k);if(j>=0&&j<Q[ix].o.length&&!(HID[ix]||[]).includes(j))answer(j)};
 document.addEventListener('keydown',qkh);mix?startMix():startCh(ch)}
 
-// ===== Dialog konfirmasi bertema (pengganti confirm bawaan browser) =====
-function askC(ttl,msg,okTxt,fn){const prev=document.activeElement;const w=document.createElement('div');w.id='cfm';
-w.innerHTML='<div class="box" role="alertdialog" aria-modal="true" aria-labelledby="cft" aria-describedby="cfd"><h2 id="cft"></h2><p id="cfd"></p><div class="row"><button type="button" class="btn alt" id="cfn">Batal</button><button type="button" class="btn danger" id="cfy"></button></div></div>';
-w.querySelector('#cft').textContent=ttl;w.querySelector('#cfd').textContent=msg;w.querySelector('#cfy').textContent=okTxt;
-document.body.appendChild(w);document.body.style.overflow='hidden';
-const no=w.querySelector('#cfn'),yes=w.querySelector('#cfy');
-const close=()=>{document.removeEventListener('keydown',kd,true);w.remove();document.body.style.overflow='';if(prev&&prev.focus)try{prev.focus({preventScroll:true})}catch(e){}};
-const kd=e=>{e.stopPropagation();if(e.key==='Escape'){e.preventDefault();close()}else if(e.key==='Tab'){e.preventDefault();(document.activeElement===no?yes:no).focus()}};
-document.addEventListener('keydown',kd,true);
-w.onclick=e=>{if(e.target===w)close()};no.onclick=close;yes.onclick=()=>{close();fn()};no.focus()}
-
 // ===== ROUTER =====
-let firstR=true;
 function render(){const h=location.hash||'#/';document.querySelectorAll('[data-nv]').forEach(x=>x.classList.toggle('on',x.dataset.nv==='k'?h.startsWith('#/l'):!h.startsWith('#/l')));const a=document.getElementById('app'),m=h.match(/^#\/m\/(\d+)/),kf=document.getElementById('kf');clearInterval(tI);closeZ();if(qkh){document.removeEventListener('keydown',qkh);qkh=null}
 if(m&&+m[1]<BAB.length){a.innerHTML=topic(+m[1]);kf.innerHTML='';if(+m[1]===2)bindAnu()}
 else if(h.startsWith('#/l')){a.innerHTML=quiz();bind();kf.innerHTML=''}
 else{a.innerHTML=home();bindTimer();bindHome();kf.innerHTML=KEL}
 a.querySelectorAll('table').forEach(t=>{if(t.parentElement&&t.parentElement.classList.contains('tw'))return;const w=document.createElement('div');w.className='tw';t.parentNode.insertBefore(w,t);w.appendChild(t)});
-document.title=m&&+m[1]<BAB.length?BAB[+m[1]].t+' – Sad Darsana':h.startsWith('#/l')?'Kuis – Sad Darsana':'Sad Darsana – Belajar Filsafat Hindu';
-const h1=a.querySelector('h1');if(h1&&!firstR){h1.tabIndex=-1;h1.focus({preventScroll:true})}firstR=false;
 scrollTo(0,0)}
 startRouter(render,h=>{const m=h.match(/^#\/m\/(\d+)/);return m?10+ +m[1]:h.startsWith('#/l')?100:0});
 </script>
