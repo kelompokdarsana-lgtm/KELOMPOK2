@@ -105,8 +105,8 @@ html[data-theme=dark] .fb{color:#ff8a80}
 html[data-theme=dark] .res{background:#3a0f2e}
 html[data-theme=dark] .nav,html[data-theme=dark] footer{background:#0e0614}
 #intro{position:fixed;inset:0;z-index:100;background:radial-gradient(circle at 50% 45%,#7a1730 0,var(--deep) 70%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.4rem;color:#fff3d6;text-align:center;cursor:pointer;transition:opacity .8s ease,visibility .8s}
-#intro.out{opacity:0;visibility:hidden;pointer-events:none;transition:opacity .8s ease,visibility 0s linear .8s}
-#intro .bl{display:grid;place-items:center;width:min(260px,60vw);aspect-ratio:1;flex:none;animation:bloom 1.6s cubic-bezier(.2,.8,.2,1) both}
+#intro.out{opacity:0;visibility:hidden}
+#intro .bl{animation:bloom 1.6s cubic-bezier(.2,.8,.2,1) both}
 #intro .mandala{width:min(260px,60vw);animation-duration:14s}
 #intro .i1{font-family:Marcellus,Georgia,serif;font-size:clamp(1.6rem,6vw,2.4rem);color:var(--gold);margin-top:.8rem;animation:rise .8s .9s ease both}
 #intro .i2{letter-spacing:.3em;text-transform:uppercase;font-size:.85rem;animation:rise .8s 1.2s ease both}
@@ -401,10 +401,9 @@ setTh(root.dataset.theme==='dark'?'dark':'light',false,true);
 try{const mq=matchMedia('(prefers-color-scheme: dark)'),ch2=e=>{let v=null;try{v=localStorage.getItem('theme')}catch(_){}if(!v)setTh(e.matches?'dark':'light',false,true)};mq.addEventListener?mq.addEventListener('change',ch2):mq.addListener&&mq.addListener(ch2)}catch(e){}
 const intro=document.getElementById('intro');
 const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
-let introDone=false,introTimer;
-const done=()=>{if(introDone)return;introDone=true;clearTimeout(introTimer);root.classList.add('go');if(intro&&intro.isConnected){intro.classList.add('out');setTimeout(()=>{if(intro.isConnected)intro.remove()},850)}};
+const done=()=>{root.classList.add('go');if(intro&&intro.isConnected){intro.classList.add('out');setTimeout(()=>intro.remove(),900)}};
 if(!intro||reduce){if(intro)intro.remove();root.classList.add('go')}
-else{const bloom=intro.querySelector('.bl');if(bloom)bloom.innerHTML=mand();intro.addEventListener('click',done,{once:true});introTimer=setTimeout(done,2800)}
+else{intro.querySelector('.bl').innerHTML=mand();intro.onclick=done;setTimeout(done,2800)}
 
 // Router hash sederhana dengan animasi geser antar halaman
 function startRouter(render,rank){
